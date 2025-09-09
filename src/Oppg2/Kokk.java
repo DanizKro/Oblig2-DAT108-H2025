@@ -16,7 +16,8 @@ public class Kokk extends Thread {
     public void run() {
         try {
             while (true) {
-                Thread.sleep(random.nextInt(4001) + 2000); // 2–6 sek
+            	// 2-6 sekunder forsinkelse
+                Thread.sleep(random.nextInt(4001) + 2000);
                 brett.leggTilBurger(navn);
             }
         } catch (InterruptedException e) {
