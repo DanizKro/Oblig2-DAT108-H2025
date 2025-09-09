@@ -9,16 +9,14 @@ public class Main {
 		Utskriftsloop loop = new Utskriftsloop(m);
 		Meldingsboks melding = new Meldingsboks(m, loop);
 		
-
 		loop.start();
 		melding.start();
 	}
 
 }
 
-
-/*
-1. Joption som tar inn brukerinfo
-2. Thread som starter å kjøre loop på det brukeren skrev inn
-3. hvis brukeren avslutter, sender signal til Thread at den skal slutte å skrive ut
+/* - Fremgangsmåte
+1. Meldingsboks - Joption som tar inn brukerinfo og oppdaterer melding
+2. Utskriftsloop som starter å kjøre loop på det brukeren skrev inn når den ser at melding ikke er NULL
+3. Hvis brukeren avslutter med "quit", metodekall til Utskriftsloop at den skal slutte å skrive ut
 */
